@@ -147,9 +147,10 @@ form.addEventListener("submit", async (e)=>{
 
     successBox.style.display = "block";
 
-    // Pixel
+    // 🔥 FIXED PIXEL (WITH EVENT ID)
     if (typeof fbq === "function") {
-      fbq('track', 'Lead');
+      const eventId = Date.now().toString();
+      fbq('track', 'Lead', {}, { eventID: eventId });
     }
 
     // WhatsApp
