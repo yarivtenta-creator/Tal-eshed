@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ממריאים לעסקים 2026</title>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '923648707097354');
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=923648707097354&ev=PageView&noscript=1"/>
+</noscript>
+
+<style>
+body{font-family:Arial;margin:0;background:#f6f8fc;text-align:center}
+.container{max-width:600px;margin:auto;padding:20px}
+h1{font-size:28px}
+button{background:#24496d;color:#fff;padding:15px;border:none;border-radius:10px;width:100%;font-size:18px}
+input{width:100%;padding:12px;margin:10px 0}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>הופכים ידע להכנסה אמיתית</h1>
+<p>למד להוביל, להנחות ולבנות ביטחון</p>
+
+<form id="form">
+<input name="name" placeholder="שם מלא" required>
+<input name="phone" placeholder="טלפון" required>
+<input name="email" placeholder="אימייל">
+<button type="submit">קבל פרטים</button>
+</form>
+
+</div>
+
+<script>
+
+const WEBHOOK = "https://script.google.com/macros/s/AKfycbziFrybD9D76PKBnaCp821S4vFPYSTbF_2aFP12awKesdq91G5QI-C-mMB439BFKWj2lA/exec";
+
+document.getElementById("form").addEventListener("submit", async (e)=>{
+  e.preventDefault();
+
+  const form = e.target;
+
+  const data = {
+    fullName: form.name.value,
+    phone: form.phone.value,
+    email: form.email.value,
+    submittedAt: new Date().toISOString()
+  };
+
+  await fetch(WEBHOOK,{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body: JSON.stringify(data)
+  });
+
+  fbq('track', 'Lead');
+
+  window.location.href = "https://wa.me/972523809797?text=השארתי פרטים לקורס";
+
+});
+</script>
+
+</body>
+</html>
