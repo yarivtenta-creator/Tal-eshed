@@ -22,11 +22,13 @@ fbq('track', 'PageView');
 
 <style>
 body{font-family:Arial;margin:0;background:#f6f8fc}
-.wrap{max-width:800px;margin:auto;padding:20px;text-align:center}
-h1{font-size:32px}
-.card{background:#fff;padding:20px;border-radius:20px;margin-top:20px}
+.wrap{max-width:900px;margin:auto;padding:20px}
+.hero{padding:40px;text-align:center}
+.card{background:#fff;border-radius:20px;padding:20px;margin-top:20px}
 button{background:#24496d;color:#fff;padding:15px;border:none;border-radius:12px;width:100%;font-size:18px}
 input,select,textarea{width:100%;padding:12px;margin:10px 0;border-radius:10px;border:1px solid #ccc}
+.success{display:none;color:green;font-weight:bold}
+.error{display:none;color:red;font-weight:bold}
 </style>
 
 </head>
@@ -35,10 +37,15 @@ input,select,textarea{width:100%;padding:12px;margin:10px 0;border-radius:10px;b
 
 <div class="wrap">
 
+<div class="hero">
 <h1>קורס הכשרת מנחים<br>ממריאים לעסקים 2026</h1>
 <p>למד להוביל, להנחות ולבנות ביטחון אמיתי</p>
+</div>
 
 <div class="card">
+
+<div id="successBox" class="success">נשלח בהצלחה ✅</div>
+<div id="errorBox" class="error">שגיאה בשליחה ❌</div>
 
 <form id="leadForm">
 
@@ -66,8 +73,15 @@ input,select,textarea{width:100%;padding:12px;margin:10px 0;border-radius:10px;b
 
 const WEBHOOK = "https://script.google.com/macros/s/AKfycbziFrybD9D76PKBnaCp821S4vFPYSTbF_2aFP12awKesdq91G5QI-C-mMB439BFKWj2lA/exec";
 
-document.getElementById("leadForm").addEventListener("submit", async (e)=>{
+const form = document.getElementById("leadForm");
+const successBox = document.getElementById("successBox");
+const errorBox = document.getElementById("errorBox");
+
+form.addEventListener("submit", async (e)=>{
   e.preventDefault();
+
+  successBox.style.display = "none";
+  errorBox.style.display = "none";
 
   const data = {
     fullName: document.getElementById("fullName").value,
@@ -83,7 +97,7 @@ document.getElementById("leadForm").addEventListener("submit", async (e)=>{
       body: JSON.stringify(data)
     });
 
-    alert("נשלח בהצלחה ✅");
+    successBox.style.display = "block";
 
     if (typeof fbq === "function") {
       fbq('track', 'Lead');
@@ -95,7 +109,7 @@ document.getElementById("leadForm").addEventListener("submit", async (e)=>{
     },500);
 
   } catch(err){
-    alert("שגיאה בשליחה ❌");
+    errorBox.style.display = "block";
     console.error(err);
   }
 
