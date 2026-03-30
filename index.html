@@ -20,33 +20,45 @@ fbq('init', '923648707097354');
 fbq('track', 'PageView');
 </script>
 
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=923648707097354&ev=PageView&noscript=1"/>
-</noscript>
-
 <style>
-body{font-family:Arial;margin:0;background:#f6f8fc;text-align:center}
-.container{max-width:600px;margin:auto;padding:20px}
-h1{font-size:28px}
-button{background:#24496d;color:#fff;padding:15px;border:none;border-radius:10px;width:100%;font-size:18px}
-input{width:100%;padding:12px;margin:10px 0}
+body{font-family:Arial;margin:0;background:#f6f8fc}
+.wrap{max-width:800px;margin:auto;padding:20px;text-align:center}
+h1{font-size:32px}
+.card{background:#fff;padding:20px;border-radius:20px;margin-top:20px}
+button{background:#24496d;color:#fff;padding:15px;border:none;border-radius:12px;width:100%;font-size:18px}
+input,select,textarea{width:100%;padding:12px;margin:10px 0;border-radius:10px;border:1px solid #ccc}
 </style>
+
 </head>
 
 <body>
 
-<div class="container">
+<div class="wrap">
 
-<h1>הופכים ידע להכנסה אמיתית</h1>
-<p>למד להוביל, להנחות ולבנות ביטחון</p>
+<h1>קורס הכשרת מנחים<br>ממריאים לעסקים 2026</h1>
+<p>למד להוביל, להנחות ולבנות ביטחון אמיתי</p>
 
-<form id="form">
-<input name="name" placeholder="שם מלא" required>
-<input name="phone" placeholder="טלפון" required>
-<input name="email" placeholder="אימייל">
-<button type="submit">קבל פרטים</button>
+<div class="card">
+
+<form id="leadForm">
+
+<input id="fullName" placeholder="שם מלא" required>
+<input id="phone" placeholder="טלפון" required>
+<input id="email" placeholder="אימייל">
+
+<select id="interest">
+<option>מידע כללי</option>
+<option>בדיקת התאמה</option>
+<option>הרשמה</option>
+</select>
+
+<textarea id="message" placeholder="הערה נוספת"></textarea>
+
+<button type="submit">שלחו פרטים</button>
+
 </form>
+
+</div>
 
 </div>
 
@@ -54,38 +66,39 @@ input{width:100%;padding:12px;margin:10px 0}
 
 const WEBHOOK = "https://script.google.com/macros/s/AKfycbziFrybD9D76PKBnaCp821S4vFPYSTbF_2aFP12awKesdq91G5QI-C-mMB439BFKWj2lA/exec";
 
-document.getElementById("form").addEventListener("submit", async (e)=>{
+document.getElementById("leadForm").addEventListener("submit", async (e)=>{
   e.preventDefault();
 
-  const form = e.target;
-
   const data = {
-    fullName: form.name.value,
-    phone: form.phone.value,
-    email: form.email.value,
-    submittedAt: new Date().toISOString()
+    fullName: document.getElementById("fullName").value,
+    phone: document.getElementById("phone").value,
+    email: document.getElementById("email").value,
+    interest: document.getElementById("interest").value,
+    message: document.getElementById("message").value
   };
 
   try {
-    await fetch(WEBHOOK, {
-      method: "POST",
+    await fetch(WEBHOOK,{
+      method:"POST",
       body: JSON.stringify(data)
     });
 
     alert("נשלח בהצלחה ✅");
 
-    // Pixel Lead event
     if (typeof fbq === "function") {
       fbq('track', 'Lead');
     }
 
-    // WhatsApp redirect
-    window.location.href = "https://wa.me/972523809797?text=השארתי פרטים לקורס";
+    setTimeout(()=>{
+      const msg = encodeURIComponent("היי, השארתי פרטים לגבי הקורס");
+      window.open("https://wa.me/972523809797?text=" + msg, "_blank");
+    },500);
 
-  } catch (err) {
+  } catch(err){
     alert("שגיאה בשליחה ❌");
     console.error(err);
   }
+
 });
 </script>
 
