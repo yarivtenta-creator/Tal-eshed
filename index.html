@@ -1,11 +1,10 @@
-לפוצאתהתכניותהמלאה<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ממריאים לעסקים 2026 | קורס הכשרת מנחים</title>
   <meta name="description" content='דף נחיתה לקורס הכשרת מנחים "ממריאים לעסקים" 2026'>
-
 
   <!-- Meta Pixel -->
   <script>
@@ -14,7 +13,6 @@
   fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=923648707097354&ev=PageView&noscript=1"/></noscript>
-
 
   <style>
     :root{
@@ -36,3 +34,412 @@
     body{
       margin:0;
       font-family:Heebo, Assistant, Arial, sans-serif;
+      color:var(--ink);
+      background:radial-gradient(circle at top right, #eef4fb 0, #f8fbff 32%, #f6f8fc 58%, #f6f8fc 100%);
+      line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(100% - 28px, var(--max)); margin-inline:auto}
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:30;
+      backdrop-filter: blur(10px);
+      background:rgba(255,255,255,.82);
+      border-bottom:1px solid rgba(231,237,245,.9);
+    }
+    .topbar .inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:14px 0;
+    }
+    .brandline{
+      font-weight:800;
+      color:var(--brand-2);
+      letter-spacing:.2px;
+    }
+    .mini{color:var(--muted); font-size:14px}
+    .btn, button{
+      appearance:none;
+      border:none;
+      cursor:pointer;
+      transition:.2s ease;
+      border-radius:999px;
+      padding:15px 24px;
+      font-weight:800;
+      font-size:16px;
+    }
+    .btn-primary, button[type="submit"]{
+      background:linear-gradient(180deg, var(--brand), var(--brand-2));
+      color:#fff;
+      box-shadow:0 10px 30px rgba(53,104,154,.26);
+    }
+    .btn-primary:hover, button[type="submit"]:hover{transform:translateY(-1px)}
+    .btn-secondary{
+      background:#fff;
+      color:var(--brand-2);
+      border:1px solid var(--line);
+    }
+    .btn-coral{background:linear-gradient(180deg,#FF8A65,#FF7F5C);color:#fff;padding:18px 32px;border-radius:999px;display:inline-block;font-weight:800;font-size:18px;box-shadow:0 10px 30px rgba(255,138,101,.26);transition:.2s ease;text-align:center;margin:20px 0}
+    .btn-coral:hover{transform:translateY(-1px);box-shadow:0 12px 35px rgba(255,138,101,.32)}
+    .hero{padding:56px 0 30px}
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:28px;
+      align-items:stretch;
+    }
+    .hero-card, .card{
+      background:var(--card);
+      border:1px solid rgba(230,236,244,.95);
+      box-shadow:var(--shadow);
+      border-radius:var(--radius);
+    }
+    .hero-card{padding:34px}
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:var(--accent);
+      color:var(--brand-2);
+      font-weight:800;
+      font-size:14px;
+    }
+    h1{
+      margin:18px 0 12px;
+      font-size:clamp(34px, 4.4vw, 58px);
+      line-height:1.08;
+      letter-spacing:-.8px;
+      color:#122033;
+    }
+    .lead{
+      font-size:clamp(17px,2vw,21px);
+      color:var(--muted);
+      margin:0 0 22px;
+    }
+    .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin:22px 0}
+    .quick-facts{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+      margin-top:20px;
+    }
+    .fact{
+      padding:14px 14px;
+      border-radius:18px;
+      background:#f8fbff;
+      border:1px solid var(--line);
+      text-align:center;
+    }
+    .fact strong{display:block; font-size:20px; color:var(--brand-2)}
+    .fact span{font-size:13px; color:var(--muted)}
+    .visual{
+      position:relative;
+      overflow:hidden;
+      min-height:100%;
+      background:linear-gradient(180deg, rgba(36,73,109,.04), rgba(36,73,109,.02)),url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    }
+    .visual::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(17,32,51,.16), rgba(17,32,51,.52));
+    }
+    .overlay{
+      position:relative;
+      z-index:1;
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:end;
+      padding:28px;
+      color:#fff;
+    }
+    .section{padding:28px 0}
+    .section-head{max-width:760px; margin:0 auto 18px; text-align:center}
+    .section-head h2{font-size:34px; margin:0 0 10px; color:#15253a}
+    .section-head p{margin:0; color:var(--muted)}
+    .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+    .card{padding:24px}
+    .icon{
+      width:48px;
+      height:48px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(180deg,#eff5fc,#e0ebf7);
+      color:var(--brand-2);
+      font-weight:900;
+      margin-bottom:14px;
+    }
+    .card h3{margin:0 0 8px; font-size:22px}
+    .card p{margin:0; color:var(--muted)}
+    .outline-list{display:grid; gap:12px; margin:0; padding:0; list-style:none}
+    .outline-list li{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px 18px;
+    }
+    .outline-list strong{color:var(--brand-2); display:block; margin-bottom:4px}
+    .leadbox{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+      padding:22px;
+      background:linear-gradient(180deg,#ffffff,#f7fbff);
+    }
+    form{display:grid; gap:12px}
+    label{font-weight:700; color:#26466a; font-size:14px}
+    input, select, textarea{
+      width:100%;
+      border:1px solid #d9e4f0;
+      background:#fff;
+      color:#122033;
+      border-radius:16px;
+      padding:14px 16px;
+      font:inherit;
+      outline:none;
+    }
+    input:focus, select:focus, textarea:focus{border-color:#8fb2d4; box-shadow:0 0 0 4px rgba(53,104,154,.08)}
+    textarea{min-height:108px; resize:vertical}
+    .fineprint{font-size:13px; color:var(--muted)}
+    .success, .error{
+      display:none;
+      padding:14px 16px;
+      border-radius:16px;
+      font-weight:700;
+      margin-bottom:12px;
+    }
+    .success{background:#ecfdf5; color:#166534; border:1px solid #bbf7d0}
+    .error{background:#fef2f2; color:#991b1b; border:1px solid #fecaca}
+    .footer{
+      padding:28px 0 50px;
+      color:var(--muted);
+      text-align:center;
+    }
+    @media (max-width: 980px){
+      .hero-grid, .grid-3, .leadbox{grid-template-columns:1fr}
+      .quick-facts{grid-template-columns:repeat(2,1fr)}
+      .topbar .btn-primary{display:none}
+    }
+    @media (max-width: 640px){
+      .hero{padding-top:24px}
+      .hero-card, .card{padding:20px}
+      .quick-facts{grid-template-columns:1fr 1fr}
+      .section-head h2{font-size:28px}
+      h1{font-size:36px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap inner">
+      <div>
+        <div class="brandline">ממריאים לעסקים 2026</div>
+        <div class="mini">קורס הכשרת מנחים</div>
+      </div>
+      <a class="btn btn-primary" href="#lead-form">השאירו פרטים עכשיו</a>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <section class="hero-card">
+        <span class="eyebrow">מחזור 2026 · הכשרה מעשית · צוות של 6 מרצים</span>
+        <h1>קורס הכשרת מנחים<br>ממריאים לעסקים 2026</h1>
+        <p class="lead">תכנית פרקטית לפיתוח יכולות הנחיה, עמידה מול קהל, דינמיקה קבוצתית ובניית ביטחון אישי – עם תהליך מובנה, חווייתי וישים.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#lead-form">בדיקת התאמה והרשמה</a>
+          <a class="btn btn-secondary" href="#program">מה לומדים בקורס</a>
+        </div>
+        <div class="quick-facts">
+          <div class="fact"><strong>8</strong><span>מפגשים</span></div>
+          <div class="fact"><strong>4</strong><span>שעות בכל מפגש</span></div>
+          <div class="fact"><strong>1</strong><span>פעם בשבוע</span></div>
+          <div class="fact"><strong>6</strong><span>מרצים בצוות</span></div>
+        </div>
+        <div style="text-align:center;margin-top:16px">
+          <a href="https://www.canva.com/design/DAG2CLvwSWo/BhYYGjy3sILBi5O1dYusAg/view?utm_content=DAG2CLvwSWo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h52e3e16b5f" class="btn-coral">לפוצאת התכניות המלאה</a>
+        </div>
+      </section>
+      <aside class="hero-card visual">
+        <div class="overlay">
+          <h2 style="margin:0 0 10px; font-size:30px; line-height:1.1">מלמידה – להובלה אמיתית</h2>
+          <p style="margin:0; color:rgba(255,255,255,.9)">כלים מעשיים, תרגול קבוצתי, מרצים חיצוניים, והכנה להנחיה מקצועית בעולם האמיתי.</p>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>למי זה מתאים</h2>
+        <p>למי שרוצה להוביל, להנחות, להשפיע ולהפוך רעיונות למציאות עם שפה מקצועית, ביטחון וכלים ישימים.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="icon">א</div>
+          <h3>לאנשים עם רצון להוביל</h3>
+          <p>מי שמרגיש שיש לו מה לתת לקבוצה, לקהילה או לעסק – ורוצה ללמוד איך להנחות נכון.</p>
+        </div>
+        <div class="card">
+          <div class="icon">ב</div>
+          <h3>למי שרוצה יותר ביטחון</h3>
+          <p>עמידה מול קהל, העברת מסר, בניית נוכחות והפיכת לחץ לדחף מקדם.</p>
+        </div>
+        <div class="card">
+          <div class="icon">ג</div>
+          <h3>למי שמחפש כלים מעשיים</h3>
+          <p>פחות תאוריה, יותר תרגול, שיח, דינמיקה, כלים ליישום מיידי ותהליך אמיתי.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="program">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>מבנה הקורס</h2>
+        <p>שמונה מפגשים שבועיים, ארבע שעות כל מפגש, עם מסלול התפתחות אישי וקבוצתי.</p>
+      </div>
+      <ul class="outline-list">
+        <li><strong>מפגש 1</strong> מבוא, תיאום ציפיות, חזון אישי, דינמיקה קבוצתית ומבנה קבוצת נטוורקינג.</li>
+        <li><strong>מפגש 2</strong> מחלום למציאות, לוח חזון, דקה מנצחת והנעת רעיון לפעולה.</li>
+        <li><strong>מפגש 3</strong> משחקי היכרות, הנחות יסוד להצלחה, דמיון מודרך, חזון ותכנית פעולה.</li>
+        <li><strong>מפגש 4</strong> מהיחיד אל היחד, אמת/שקר ומודעות, כללי קבוצה ומקצוענות.</li>
+        <li><strong>מפגש 5</strong> מחמאות וחשיפה אישית, מצגת מרכזית, עמידה מול קהל.</li>
+        <li><strong>מפגש 6</strong> דינמיקות קבוצתיות ומעגל הדאגה וההשפעה עם מרצה חיצוני.</li>
+        <li><strong>מפגש 7</strong> התמודדות עם לחץ, כלי בקרה ליישום התכנית והובלת דינמיקה.</li>
+        <li><strong>מפגש 8</strong> קבלת ביקורת בצורה יעילה, ספיד־נטוורקינג, מעגל קשבה וסיום.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="lead-form">
+    <div class="wrap">
+      <div class="leadbox hero-card">
+        <div>
+          <div class="section-head" style="text-align:right;margin:0 0 14px">
+            <h2 style="margin-bottom:8px">השאירו פרטים</h2>
+            <p>מלאו את הטופס ונחזור אליכם עם פרטים מלאים, התאמה והרשמה למחזור הקרוב.</p>
+          </div>
+          <div id="successBox" class="success">✅ תודה! הפרטים שלך התקבלו בהצלחה. נחזור אליך בהקדם האפשרי 🙏</div>
+          <div id="errorBox" class="error">השליחה לא הושלמה. נסו שוב בעוד רגע.</div>
+          <form id="leadForm">
+            <div>
+              <label for="fullName">שם מלא *</label>
+              <input id="fullName" name="fullName" required placeholder="הכניסו שם מלא" />
+            </div>
+            <div>
+              <label for="phone">טלפון *</label>
+              <input id="phone" name="phone" type="tel" required placeholder="הכניסו מספר טלפון" />
+            </div>
+            <div>
+              <label for="email">אימייל</label>
+              <input id="email" name="email" type="email" placeholder="הכניסו כתובת אימייל" />
+            </div>
+            <div>
+              <label for="interest">מה מעניין אותך?</label>
+              <select id="interest" name="interest">
+                <option value="מידע כללי">מידע כללי</option>
+                <option value="בדיקת התאמה">בדיקת התאמה</option>
+                <option value="הרשמה">הרשמה</option>
+                <option value="שיחה טלפונית">שיחה טלפונית</option>
+              </select>
+            </div>
+            <div>
+              <label for="message">הערה נוספת</label>
+              <textarea id="message" name="message" placeholder="אפשר לרשום שאלה או בקשה לחזרה"></textarea>
+            </div>
+            <button type="submit">שלחו פרטים</button>
+            <div class="fineprint">הפרטים נשמרים לצורך יצירת קשר בלבד.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer wrap">
+    <p>© 2026 קורס הכשרת מנחים "ממריאים לעסקים"</p>
+  </footer>
+
+  <script>
+    const WEBHOOK = "https://script.google.com/macros/s/AKfycbziFrybD9D76PKBnaCp821S4vFPYSTbF_2aFP12awKesdq91G5QI-C-mMB439BFKWj2lA/exec";
+    const form = document.getElementById("leadForm");
+    const successBox = document.getElementById("successBox");
+    const errorBox = document.getElementById("errorBox");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      successBox.style.display = "none";
+      errorBox.style.display = "none";
+
+      const data = {
+        fullName: document.getElementById("fullName").value.trim(),
+        phone: document.getElementById("phone").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        interest: document.getElementById("interest").value,
+        message: document.getElementById("message").value.trim()
+      };
+
+      if (!data.fullName || !data.phone) {
+        errorBox.textContent = "בדקו שמילאתם שם וטלפון";
+        errorBox.style.display = "block";
+        return;
+      }
+
+      try {
+        await fetch(WEBHOOK, {
+          method: "POST",
+          body: JSON.stringify(data)
+        });
+
+        successBox.style.display = "block";
+
+        if (typeof fbq === "function") {
+          const eventId = Date.now().toString();
+          fbq('track', 'Lead', {}, { eventID: eventId });
+        }
+
+        setTimeout(() => {
+          const talMsg = `
+*🔔 ליד חדש - ממריאים לעסקים 2026*
+👤 שם: ${data.fullName}
+📱 טלפון: ${data.phone}
+📧 אימייל: ${data.email || "לא צוין"}
+❓ התעניינות: ${data.interest}
+💬 הערה: ${data.message || "לא צוינה"}
+          `.trim();
+          const encodedTal = encodeURIComponent(talMsg);
+          fetch(`https://wa.me/972523809797?text=${encodedTal}`).catch(e => console.log(e));
+        }, 200);
+
+        setTimeout(() => {
+          const yourMsg = `
+*ליד חדש - ממריאים לעסקים 2026*
+👤 *שם:* ${data.fullName}
+📱 *טלפון:* ${data.phone}
+📧 *אימייל:* ${data.email || "לא צוין"}
+❓ *התעניינות:* ${data.interest}
+💬 *הערה:* ${data.message || "לא צוינה"}
+          `.trim();
+          const encodedYou = encodeURIComponent(yourMsg);
+          window.open("https://wa.me/972523809797?text=" + encodedYou, "_blank");
+        }, 500);
+
+        form.reset();
+      } catch(err) {
+        errorBox.textContent = "השליחה לא הושלמה. אנא נסו שוב.";
+        errorBox.style.display = "block";
+        console.error(err);
+      }
+    });
+  </script>
+</body>
+</html>
