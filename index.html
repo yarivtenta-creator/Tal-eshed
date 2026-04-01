@@ -363,40 +363,8 @@ h<!DOCTYPE html>
           <p>מלאו את הטופס ונחזור אליכם עם פרטים מלאים, התאמה והרשמה למחזור הקרוב.</p>
         </div>
 
-        <div id="successBox" class="success">הפרטים נשלחו בהצלחה. נחזור אליכם בהקדם.</div>
-        <div id="errorBox" class="error">השליחה לא הושלמה. בדקו שה־Webhook הוגדר נכון או נסו שוב.</div>
 
-        <form id="leadForm" action="https://formsubmit.co/yariv.tenta@gmail.com,taltip15@gmail.com" method="POST">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://yarivtenta-creator.github.io/Tal-eshed/?success=true">
-          <div>
-            <label for="fullName">שם מלא</label>
-            <input id="fullName" name="fullName" required placeholder="הכניסו שם מלא" />
-          </div>
-          <div>
-            <label for="phone">טלפון</label>
-            <input id="phone" name="phone" type="tel" required placeholder="הכניסו מספר טלפון" />
-          </div>
-          <div>
-            <label for="email">אימייל</label>
-            <input id="email" name="email" type="email" placeholder="הכניסו כתובת אימייל" />
-          </div>
-          <div>
-            <label for="interest">מה מעניין אותך?</label>
-            <select id="interest" name="interest">
-              <option value="מידע כללי">מידע כללי</option>
-              <option value="בדיקת התאמה">בדיקת התאמה</option>
-              <option value="הרשמה">הרשמה</option>
-              <option value="שיחה טלפונית">שיחה טלפונית</option>
-            </select>
-          </div>
-          <div>
-            <label for="message">הערה נוספת</label>
-            <textarea id="message" name="message" placeholder="אפשר לרשום שאלה או בקשה לחזרה"></textarea>
-          </div>
-          <button type="submit">שלחו פרטים</button>
-          <div class="fineprint">הפרטים נשמרים לצורך יצירת קשר בלבד.</div>
-        </form>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfo-W09JOM08czt7E7TgBrMSdZ5CWb-RcEyHvTlFjiDwHj_VA/viewform?embedded=true" width="100%" height="950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
       </div>
     </div>
   </section>
@@ -432,13 +400,6 @@ h<!DOCTYPE html>
 
   <script>
     const cfg = window.APP_CONFIG || {};
-    const successBox = document.getElementById('successBox');
-    const errorBox = document.getElementById('errorBox');
-
-    function showBox(kind) {
-      successBox.style.display = kind === 'success' ? 'block' : 'none';
-      errorBox.style.display = kind === 'error' ? 'block' : 'none';
-    }
 
     function trackLead() {
       try {
@@ -449,12 +410,8 @@ h<!DOCTYPE html>
       } catch(e) {}
     }
 
-    // Check if form was successfully submitted
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('success') === 'true') {
-      showBox('success');
-      trackLead();
-    }
+    // Track form submissions
+    trackLead();
   </script>
 </body>
 </html>
