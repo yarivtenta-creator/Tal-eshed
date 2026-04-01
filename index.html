@@ -3,91 +3,198 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ממריאים לעסקים 2026</title>
+<title>קורס הכשרת מנחים ממריאים לעסקים 2026</title>
 
-<!-- Meta Pixel -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '923648707097354');
 fbq('track', 'PageView');
 </script>
 
 <style>
-body{
-  margin:0;
-  font-family:Arial;
-  background:#f6f8fc;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.wrap{max-width:1100px;margin:auto;padding:20px}
-.hero{text-align:center;padding:60px 20px}
-.hero h1{font-size:42px;margin-bottom:10px}
-.hero p{color:#555}
-.card{
-  background:#fff;
-  border-radius:20px;
-  padding:30px;
-  margin-top:30px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08)
-}
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  gap:20px;
-}
-.item{
-  background:#fff;
-  padding:20px;
-  border-radius:15px;
-}
-form{display:grid;gap:10px}
-input,select,textarea{
-  padding:12px;
-  border-radius:10px;
-  border:1px solid #ccc;
-}
-button{
-  background:#24496d;
-  color:#fff;
-  padding:15px;
-  border:none;
-  border-radius:10px;
-  font-size:18px;
-  cursor:pointer;
-}
-.btn-coral{
-  background:linear-gradient(180deg,#FF8A65,#FF7F5C);
-  color:#fff;
-  padding:18px 32px;
-  border-radius:999px;
-  display:inline-block;
-  font-weight:bold;
-  font-size:18px;
-  text-decoration:none;
-  box-shadow:0 10px 30px rgba(255,138,101,.26);
-  transition:.2s ease;
-  text-align:center;
-  margin:30px 0;
-  border:none;
-  cursor:pointer;
-}
-.btn-coral:hover{
-  transform:translateY(-1px);
-  box-shadow:0 12px 35px rgba(255,138,101,.32);
-}
-.button-container{text-align:center}
-.success{display:none;color:green;font-weight:bold}
-.error{display:none;color:red;font-weight:bold}
 
-@media(max-width:768px){
-  .grid{grid-template-columns:1fr}
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: #ffffff;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.benefit-item {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.button-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.btn-coral {
+  background: linear-gradient(180deg, #FF8A65, #FF7F5C);
+  color: white;
+  padding: 16px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  box-shadow: 0 10px 30px rgba(255, 138, 101, 0.26);
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-coral:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(255, 138, 101, 0.32);
+}
+
+.form-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.form-card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #1a1a1a;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #FF8A65;
+  box-shadow: 0 0 0 3px rgba(255, 138, 101, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  background: #24496d;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: #1a3450;
+}
+
+.success {
+  display: none;
+  background: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.error {
+  display: none;
+  background: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .form-card {
+    padding: 20px;
+  }
 }
 </style>
 
@@ -95,103 +202,115 @@ button{
 
 <body>
 
-<div class="wrap">
+<div class="container">
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <h1>קורס הכשרת מנחים<br>ממריאים לעסקים 2026</h1>
+    <p>למד להוביל, להנחות ולבנות ביטחון אמיתי</p>
+  </div>
 
-<!-- HERO -->
-<div class="hero">
-<h1>קורס הכשרת מנחים<br>ממריאים לעסקים 2026</h1>
-<p>למד להוביל, להנחות ולבנות ביטחון אמיתי</p>
-</div>
+  <!-- BENEFITS SECTION -->
+  <div class="benefits">
+    <div class="benefit-item">ביטחון מול קהל</div>
+    <div class="benefit-item">הובלות קבוצות</div>
+    <div class="benefit-item">בניית הכנסה</div>
+  </div>
 
-<!-- BENEFITS -->
-<div class="grid">
-<div class="item">ביטחון מול קהל</div>
-<div class="item">הובלת קבוצות</div>
-<div class="item">בניית הכנסה</div>
-</div>
+  <!-- ORANGE BUTTON -->
+  <div class="button-container">
+    <a href="https://www.canva.com/design/DAG2CLvwSWo/BhYYGjy3sILBi5O1dYusAg/view?utm_content=DAG2CLvwSWo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h52e3e16b5f" class="btn-coral">למצגת התכנית המלאה</a>
+  </div>
 
-<!-- BUTTON -->
-<div class="button-container">
-<a href="https://www.canva.com/design/DAG2CLvwSWo/BhYYGjy3sILBi5O1dYusAg/view?utm_content=DAG2CLvwSWo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h52e3e16b5f" class="btn-coral">למצגת התכנית המלאה</a>
-</div>
+  <!-- FORM SECTION -->
+  <div class="form-card">
+    <h2>השאירו פרטים</h2>
 
-<!-- FORM -->
-<div class="card">
+    <div id="successBox" class="success">✅ תודה! הפרטים שלך התקבלו בהצלחה</div>
+    <div id="errorBox" class="error">❌ שגיאה בשליחה. אנא נסו שוב</div>
 
-<div id="successBox" class="success">נשלח בהצלחה ✅</div>
-<div id="errorBox" class="error">שגיאה בשליחה ❌</div>
+    <form id="leadForm">
+      <div class="form-group">
+        <input id="fullName" type="text" placeholder="שם מלא" required>
+      </div>
 
-<form id="leadForm">
+      <div class="form-group">
+        <input id="phone" type="tel" placeholder="טלפון" required>
+      </div>
 
-<input id="fullName" placeholder="שם מלא" required>
-<input id="phone" placeholder="טלפון" required>
-<input id="email" placeholder="אימייל">
+      <div class="form-group">
+        <input id="email" type="email" placeholder="אימייל">
+      </div>
 
-<select id="interest">
-<option>מידע כללי</option>
-<option>בדיקת התאמה</option>
-<option>הרשמה</option>
-</select>
+      <div class="form-group">
+        <select id="interest">
+          <option value="מידע כללי">מידע כללי</option>
+          <option value="בדיקת התאמה">בדיקת התאמה</option>
+          <option value="הרשמה">הרשמה</option>
+          <option value="שיחה טלפונית">שיחה טלפונית</option>
+        </select>
+      </div>
 
-<textarea id="message" placeholder="הערה נוספת"></textarea>
+      <div class="form-group">
+        <textarea id="message" placeholder="הערה נוספת"></textarea>
+      </div>
 
-<button type="submit">שלחו פרטים</button>
-
-</form>
-
-</div>
-
+      <button type="submit" class="submit-btn">שלחו פרטים</button>
+    </form>
+  </div>
 </div>
 
 <script>
-
 const WEBHOOK = "https://script.google.com/macros/s/AKfycbziFrybD9D76PKBnaCp821S4vFPYSTbF_2aFP12awKesdq91G5QI-C-mMB439BFKWj2lA/exec";
 
 const form = document.getElementById("leadForm");
 const successBox = document.getElementById("successBox");
 const errorBox = document.getElementById("errorBox");
 
-form.addEventListener("submit", async (e)=>{
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   successBox.style.display = "none";
   errorBox.style.display = "none";
 
   const data = {
-    fullName: document.getElementById("fullName").value,
-    phone: document.getElementById("phone").value,
-    email: document.getElementById("email").value,
+    fullName: document.getElementById("fullName").value.trim(),
+    phone: document.getElementById("phone").value.trim(),
+    email: document.getElementById("email").value.trim(),
     interest: document.getElementById("interest").value,
-    message: document.getElementById("message").value
+    message: document.getElementById("message").value.trim()
   };
 
+  if (!data.fullName || !data.phone) {
+    errorBox.textContent = "❌ אנא מלאו שם וטלפון";
+    errorBox.style.display = "block";
+    return;
+  }
+
   try {
-    await fetch(WEBHOOK,{
-      method:"POST",
+    await fetch(WEBHOOK, {
+      method: "POST",
       body: JSON.stringify(data)
     });
 
     successBox.style.display = "block";
 
-    // 🔥 FIXED PIXEL (WITH EVENT ID)
     if (typeof fbq === "function") {
       const eventId = Date.now().toString();
       fbq('track', 'Lead', {}, { eventID: eventId });
     }
 
-    // WhatsApp
-    setTimeout(()=>{
-      const msg = encodeURIComponent("היי, השארתי פרטים לגבי הקורס");
+    setTimeout(() => {
+      const msg = encodeURIComponent("היי, השארתי פרטים לגבי קורס ממריאים לעסקים");
       window.open("https://wa.me/972523809797?text=" + msg, "_blank");
-    },500);
+    }, 500);
 
     form.reset();
 
-  } catch(err){
+  } catch(err) {
+    errorBox.textContent = "❌ שגיאה בשליחה. אנא נסו שוב";
     errorBox.style.display = "block";
     console.error(err);
   }
-
 });
 </script>
 
