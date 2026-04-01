@@ -366,7 +366,9 @@ h<!DOCTYPE html>
         <div id="successBox" class="success">הפרטים נשלחו בהצלחה. נחזור אליכם בהקדם.</div>
         <div id="errorBox" class="error">השליחה לא הושלמה. בדקו שה־Webhook הוגדר נכון או נסו שוב.</div>
 
-        <form id="leadForm">
+        <form id="leadForm" action="https://formsubmit.co/yariv.tenta@gmail.com,taltip15@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://yarivtenta-creator.github.io/Tal-eshed/?success=true">
           <div>
             <label for="fullName">שם מלא</label>
             <input id="fullName" name="fullName" required placeholder="הכניסו שם מלא" />
@@ -430,8 +432,6 @@ h<!DOCTYPE html>
 
   <script>
     const cfg = window.APP_CONFIG || {};
-
-    const form = document.getElementById('leadForm');
     const successBox = document.getElementById('successBox');
     const errorBox = document.getElementById('errorBox');
 
@@ -449,53 +449,12 @@ h<!DOCTYPE html>
       } catch(e) {}
     }
 
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      showBox('');
-
-      const data = {
-        course: cfg.courseName || 'ממריאים לעסקים 2026',
-        fullName: form.fullName.value.trim(),
-        phone: form.phone.value.trim(),
-        email: form.email.value.trim(),
-        interest: form.interest.value,
-        message: form.message.value.trim(),
-        source: 'landing-page',
-        pageUrl: window.location.href,
-        submittedAt: new Date().toISOString()
-      };
-
-      if (!data.fullName || !data.phone) {
-        showBox('error');
-        return;
-      }
-
-      if (cfg.formMode === 'webhook') {
-        if (!cfg.webhookUrl || cfg.webhookUrl.includes('PASTE_')) {
-          showBox('error');
-          errorBox.textContent = 'צריך להדביק כתובת Webhook ב־APP_CONFIG כדי שהטופס ישלח לידים.';
-          return;
-        }
-
-        try {
-          const res = await fetch(cfg.webhookUrl, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-          });
-
-          if (!res.ok) throw new Error('Webhook error');
-          form.reset();
-          showBox('success');
-          trackLead();
-          if (cfg.redirectAfterSubmit) window.location.href = cfg.redirectAfterSubmit;
-        } catch (err) {
-          showBox('error');
-        }
-      } else {
-        showBox('error');
-      }
-    });
+    // Check if form was successfully submitted
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+      showBox('success');
+      trackLead();
+    }
   </script>
 </body>
 </html>
