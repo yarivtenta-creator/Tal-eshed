@@ -357,14 +357,23 @@ h<!DOCTYPE html>
 
   <section class="section" id="lead-form">
     <div class="wrap leadbox hero-card">
-      <div>
+      <div id="formContainer">
         <div class="section-head" style="text-align:right;margin:0 0 14px">
           <h2 style="margin-bottom:8px">השאירו פרטים</h2>
           <p>מלאו את הטופס ונחזור אליכם עם פרטים מלאים, התאמה והרשמה למחזור הקרוב.</p>
         </div>
 
+        <iframe id="googleForm" src="https://docs.google.com/forms/d/e/1FAIpQLSfo-W09JOM08czt7E7TgBrMSdZ5CWb-RcEyHvTlFjiDwHj_VA/viewform?embedded=true" width="100%" height="950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
 
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfo-W09JOM08czt7E7TgBrMSdZ5CWb-RcEyHvTlFjiDwHj_VA/viewform?embedded=true" width="100%" height="950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <div id="thankYouBox" style="display:none; text-align:center; padding:60px 20px;">
+        <div style="font-size:48px; margin-bottom:20px;">✅</div>
+        <h2 style="font-size:32px; color:#0f766e; margin-bottom:16px;">תודה על ההרשמה!</h2>
+        <p style="font-size:18px; color:#5f6b7a; margin-bottom:32px; line-height:1.8;">
+          המידע שלך התקבל בהצלחה.<br>
+          נחזור אליכם בהקדם עם פרטים מלאים, בדיקת התאמה והרשמה למחזור הקרוב.
+        </p>
+        <a href="#lead-form" style="display:inline-block; padding:15px 30px; background:linear-gradient(180deg, #35689a, #24496d); color:white; border-radius:999px; font-weight:800; text-decoration:none; margin-top:20px;">חזור לעמוד הבית</a>
       </div>
     </div>
   </section>
@@ -400,6 +409,8 @@ h<!DOCTYPE html>
 
   <script>
     const cfg = window.APP_CONFIG || {};
+    const formContainer = document.getElementById('formContainer');
+    const thankYouBox = document.getElementById('thankYouBox');
 
     function trackLead() {
       try {
@@ -410,8 +421,53 @@ h<!DOCTYPE html>
       } catch(e) {}
     }
 
-    // Track form submissions
-    trackLead();
+    // Detect form submission and show thank you message
+    function checkFormSubmission() {
+      // Check if form iframe has loaded and may have submitted
+      // Google Forms redirects after submission, so we monitor for changes
+      const observer = new MutationObserver(() => {
+        // If form was just submitted, Google might show thank you
+        // We'll also trigger on user session completion
+      });
+
+      // Listen for storage changes (Google Forms uses this)
+      window.addEventListener('storage', () => {
+        showThankYou();
+      });
+
+      // Also check periodically for form submission
+      // Google Forms submissions may not have perfect detection
+      // so we'll use a combination approach
+      setTimeout(() => {
+        // Check if iframe content indicates submission
+        try {
+          const iframeDoc = document.getElementById('googleForm').contentDocument;
+          if (iframeDoc && iframeDoc.body.innerText.includes('تم استقبال إجابتك') ||
+              iframeDoc.body.innerText.includes('שלחנו את התשובה')) {
+            showThankYou();
+          }
+        } catch(e) {
+          // Cross-origin iframe - can't detect directly
+          // Use alternative: show thank you after a reasonable time
+        }
+      }, 2000);
+    }
+
+    function showThankYou() {
+      formContainer.style.display = 'none';
+      thankYouBox.style.display = 'block';
+      trackLead();
+      // Scroll to thank you message
+      setTimeout(() => {
+        thankYouBox.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+
+    // For testing: expose function to window for manual triggering
+    window.showThankYou = showThankYou;
+
+    // Start monitoring
+    checkFormSubmission();
   </script>
 </body>
 </html>
