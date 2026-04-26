@@ -1,476 +1,169 @@
-h<!DOCTYPE html>
-<html lang="he" dir="rtl">
+<!DOCTYPE html>
+<html lang="he">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ממריאים לעסקים 2026 | קורס הכשרת מנחים</title>
-  <meta name="description" content='דף נחיתה לקורס הכשרת מנחים "ממריאים לעסקים" 2026 – השאירו פרטים וקבלו מידע נוסף.' />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>טל אשד - עבודה עם נוער</title>
   <style>
-    :root{
-      --bg:#f6f8fc;
-      --card:#ffffff;
-      --ink:#1f2937;
-      --muted:#5f6b7a;
-      --line:#e7edf5;
-      --brand:#35689a;
-      --brand-2:#24496d;
-      --accent:#dfeaf6;
-      --ok:#0f766e;
-      --shadow:0 18px 50px rgba(23,38,60,.12);
-      --radius:24px;
-      --max:1180px;
+    body {
+      font-family: Arial;
+      margin: 0;
+      direction: rtl;
+      background: #ffffff;
+      color: #111;
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Heebo, Assistant, Arial, sans-serif;
-      color:var(--ink);
-      background:
-        radial-gradient(circle at top right, #eef4fb 0, #f8fbff 32%, #f6f8fc 58%, #f6f8fc 100%);
-      line-height:1.6;
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
     }
-    a{text-decoration:none;color:inherit}
-    .wrap{width:min(100% - 28px, var(--max)); margin-inline:auto}
-    .topbar{
-      position:sticky; top:0; z-index:30;
-      backdrop-filter: blur(10px);
-      background:rgba(255,255,255,.82);
-      border-bottom:1px solid rgba(231,237,245,.9);
+    h1 {
+      font-size: 28px;
+      line-height: 1.3;
     }
-    .topbar .inner{
-      display:flex; align-items:center; justify-content:space-between; gap:16px;
-      padding:14px 0;
+    h2 {
+      font-size: 22px;
+      margin-top: 30px;
     }
-    .brandline{
-      font-weight:800; color:var(--brand-2); letter-spacing:.2px;
+    p {
+      font-size: 16px;
+      line-height: 1.6;
     }
-    .mini{color:var(--muted); font-size:14px}
-    .btn, button{
-      appearance:none; border:none; cursor:pointer; transition:.2s ease;
-      border-radius:999px; padding:15px 24px; font-weight:800; font-size:16px;
+    .cta {
+      display: block;
+      background: #25D366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 8px;
     }
-    .btn-primary, button[type="submit"]{
-      background:linear-gradient(180deg, var(--brand), var(--brand-2)); color:#fff;
-      box-shadow:0 10px 30px rgba(53,104,154,.26);
+    .box {
+      background: #f5f5f5;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 8px;
     }
-    .btn-primary:hover, button[type="submit"]:hover{transform:translateY(-1px)}
-    .btn-secondary{
-      background:#fff; color:var(--brand-2); border:1px solid var(--line);
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      font-size: 16px;
     }
-    .hero{padding:56px 0 30px}
-    .hero-grid{
-      display:grid; grid-template-columns:1.05fr .95fr; gap:28px; align-items:stretch;
+    button {
+      width: 100%;
+      padding: 15px;
+      background: #000;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
     }
-    .hero-card, .card{
-      background:var(--card); border:1px solid rgba(230,236,244,.95); box-shadow:var(--shadow); border-radius:var(--radius);
-    }
-    .hero-card{padding:34px}
-    .eyebrow{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:8px 12px; border-radius:999px; background:var(--accent); color:var(--brand-2);
-      font-weight:800; font-size:14px;
-    }
-    h1{
-      margin:18px 0 12px; font-size:clamp(34px, 4.4vw, 58px); line-height:1.08;
-      letter-spacing:-.8px; color:#122033;
-    }
-    .lead{
-      font-size:clamp(17px,2vw,21px); color:var(--muted); margin:0 0 22px;
-    }
-    .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin:22px 0}
-    .quick-facts{
-      display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:20px;
-    }
-    .fact{
-      padding:14px 14px; border-radius:18px; background:#f8fbff; border:1px solid var(--line);
-      text-align:center;
-    }
-    .fact strong{display:block; font-size:20px; color:var(--brand-2)}
-    .fact span{font-size:13px; color:var(--muted)}
-    .visual{
-      position:relative; overflow:hidden; min-height:100%;
-      background:
-        linear-gradient(180deg, rgba(36,73,109,.04), rgba(36,73,109,.02)),
-        url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-    }
-    .visual::before{
-      content:""; position:absolute; inset:0;
-      background:linear-gradient(180deg, rgba(17,32,51,.16), rgba(17,32,51,.52));
-    }
-    .overlay{
-      position:relative; z-index:1; height:100%; display:flex; flex-direction:column; justify-content:end;
-      padding:28px; color:#fff;
-    }
-    .badge-row{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:14px}
-    .badge{
-      background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.24);
-      padding:8px 12px; border-radius:999px; font-size:13px; backdrop-filter:blur(6px)
-    }
-    .overlay h2{margin:0 0 10px; font-size:30px; line-height:1.1}
-    .overlay p{margin:0; color:rgba(255,255,255,.9)}
-    .section{padding:28px 0}
-    .section-head{max-width:760px; margin:0 auto 18px; text-align:center}
-    .section-head h2{font-size:34px; margin:0 0 10px; color:#15253a}
-    .section-head p{margin:0; color:var(--muted)}
-    .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
-    .grid-2{display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
-    .card{padding:24px}
-    .icon{
-      width:48px; height:48px; border-radius:14px; display:grid; place-items:center;
-      background:linear-gradient(180deg,#eff5fc,#e0ebf7); color:var(--brand-2); font-weight:900;
-      margin-bottom:14px;
-    }
-    .card h3{margin:0 0 8px; font-size:22px}
-    .card p{margin:0; color:var(--muted)}
-    .outline-list{display:grid; gap:12px; margin:0; padding:0; list-style:none}
-    .outline-list li{
-      background:#fff; border:1px solid var(--line); border-radius:18px; padding:16px 18px;
-    }
-    .outline-list strong{color:var(--brand-2); display:block; margin-bottom:4px}
-    .accent{
-      background:linear-gradient(180deg, #f6fbff, #eef5fd);
-      border:1px solid #dfe9f5;
-    }
-    .schedule{
-      display:grid; grid-template-columns:1.1fr .9fr; gap:18px; align-items:start;
-    }
-    .chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
-    .chip{
-      padding:9px 13px; border-radius:999px; background:#fff; border:1px solid var(--line); color:var(--brand-2); font-weight:700;
-    }
-    .testi{
-      position:relative; padding-top:30px;
-    }
-    .quote{
-      position:absolute; top:16px; right:18px; font-size:42px; color:#d9e6f3; font-weight:900;
-    }
-    .faq details{
-      background:#fff; border:1px solid var(--line); border-radius:18px; padding:16px 18px;
-    }
-    .faq{display:grid; gap:12px}
-    summary{cursor:pointer; font-weight:800; color:#1d3048}
-    details p{margin:10px 0 0; color:var(--muted)}
-    .leadbox{
-      display:grid; grid-template-columns:1fr 1fr; gap:20px;
-      padding:22px;
-      background:linear-gradient(180deg,#ffffff,#f7fbff);
-    }
-    form{display:grid; gap:12px}
-    label{font-weight:700; color:#26466a; font-size:14px}
-    input, select, textarea{
-      width:100%; border:1px solid #d9e4f0; background:#fff; color:#122033;
-      border-radius:16px; padding:14px 16px; font:inherit; outline:none;
-    }
-    input:focus, select:focus, textarea:focus{border-color:#8fb2d4; box-shadow:0 0 0 4px rgba(53,104,154,.08)}
-    textarea{min-height:108px; resize:vertical}
-    .fineprint{font-size:13px; color:var(--muted)}
-    .success, .error{
-      display:none; padding:14px 16px; border-radius:16px; font-weight:700;
-    }
-    .success{background:#ecfdf5; color:#166534; border:1px solid #bbf7d0}
-    .error{background:#fef2f2; color:#991b1b; border:1px solid #fecaca}
-    .contact-box{
-      background:#13304c; color:#fff;
-    }
-    .contact-box h3{color:#fff}
-    .contact-box p, .contact-box li, .contact-box .mini{color:rgba(255,255,255,.88)}
-    .contact-box .chip{background:rgba(255,255,255,.08); color:#fff; border-color:rgba(255,255,255,.12)}
-    .footer{
-      padding:28px 0 50px; color:var(--muted); text-align:center;
-    }
-    .sticky-cta{
-      position:fixed; left:14px; right:14px; bottom:14px; z-index:40;
-      display:none;
-    }
-    .sticky-cta a{
-      display:block; text-align:center; padding:15px 20px; border-radius:999px;
-      background:linear-gradient(180deg,var(--brand),var(--brand-2)); color:#fff; font-weight:900;
-      box-shadow:0 16px 30px rgba(36,73,109,.28);
-    }
-    @media (max-width: 980px){
-      .hero-grid, .grid-3, .grid-2, .schedule, .leadbox{grid-template-columns:1fr}
-      .quick-facts{grid-template-columns:repeat(2,1fr)}
-      .sticky-cta{display:block}
-      .topbar .btn-primary{display:none}
-    }
-    @media (max-width: 640px){
-      .hero{padding-top:24px}
-      .hero-card, .card{padding:20px}
-      .quick-facts{grid-template-columns:1fr 1fr}
-      .section-head h2{font-size:28px}
-      h1{font-size:36px}
+    .sticky {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #25D366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 18px;
+      text-decoration: none;
     }
   </style>
-
-  <script>
-    window.APP_CONFIG = {
-      formMode: "webhook", 
-      webhookUrl: "https://script.google.com/macros/s/AKfycbzZs7qJW4YPdNRp8_orphiZo17_BCRqJVqzAlFjL3_8tor_vpS4Ie1OUUaF44JN_0BPCA/exec",
-      redirectAfterSubmit: "",
-      whatsappNumber: "972523809797",
-      courseName: 'קורס הכשרת מנחים "ממריאים לעסקים" 2026',
-      metaPixelId: "923648707097354",
-      ga4MeasurementId: ""
-    };
-  </script>
-
-  <script>
-    (function() {
-      const cfg = window.APP_CONFIG || {};
-      if (cfg.metaPixelId && !cfg.metaPixelId.includes('PASTE_')) {
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', cfg.metaPixelId);
-        fbq('track', 'PageView');
-      }
-      if (cfg.ga4MeasurementId && !cfg.ga4MeasurementId.includes('PASTE_')) {
-        const s1 = document.createElement('script');
-        s1.async = true;
-        s1.src = 'https://www.googletagmanager.com/gtag/js?id=' + cfg.ga4MeasurementId;
-        document.head.appendChild(s1);
-        const s2 = document.createElement('script');
-        s2.innerHTML = `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${cfg.ga4MeasurementId}');
-        `;
-        document.head.appendChild(s2);
-      }
-    })();
-  </script>
 </head>
+
 <body>
-  <div class="topbar">
-    <div class="wrap inner">
-      <div>
-        <div class="brandline">ממריאים לעסקים 2026</div>
-        <div class="mini">קורס הכשרת מנחים · </div>
-      </div>
-      <a class="btn btn-primary" href="#lead-form">השאירו פרטים עכשיו</a>
-    </div>
+
+<div class="container">
+
+  <!-- HERO -->
+  <h1>
+    יש לכם ניסיון עם נוער?<br>
+    אפשר להפוך את זה להכנסה יציבה
+  </h1>
+
+  <p>
+    אם יש לכם רקע בחינוך, טיפול או הדרכה —  
+    אפשר לבנות מזה מסלול מקצועי ברור עם ליווי.
+  </p>
+
+  <a class="cta" href="#form">בדקו התאמה עכשיו</a>
+
+  <!-- PROBLEM -->
+  <h2>מרגישים שיש לכם ניסיון — אבל אין כיוון?</h2>
+
+  <p>
+    יש לכם ידע. יש ניסיון.  
+    אבל אין מסלול ברור איך להפוך את זה להכנסה יציבה.
+  </p>
+
+  <p>
+    זה בדיוק מה שהתהליך הזה פותר.
+  </p>
+
+  <!-- BENEFITS -->
+  <div class="box">
+    ✔ מסלול ברור לעבודה עם נוער<br>
+    ✔ ליווי והכוונה<br>
+    ✔ מתאים לבעלי רקע בתחום<br>
+    ✔ אפשר לשלב עם עבודה קיימת
   </div>
 
-  <header class="hero">
-    <div class="wrap hero-grid">
-      <section class="hero-card">
-        <span class="eyebrow">מחזור 2026 · הכשרה מעשית · צוות של 6 מרצים</span>
-        <h1>קורס הכשרת מנחים<br>ממריאים לעסקים 2026</h1>
-        <p class="lead">תכנית פרקטית לפיתוח יכולות הנחיה, עמידה מול קהל, דינמיקה קבוצתית ובניית ביטחון אישי – עם תהליך מובנה, חווייתי וישים.</p>
+  <!-- QUALIFY -->
+  <h2>למי זה מתאים?</h2>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#lead-form">בדיקת התאמה והרשמה</a>
-          <a class="btn btn-secondary" href="#program">מה לומדים בקורס</a>
-        </div>
-
-        <div class="quick-facts">
-          <div class="fact"><strong>8</strong><span>מפגשים</span></div>
-          <div class="fact"><strong>4</strong><span>שעות בכל מפגש</span></div>
-          <div class="fact"><strong>1</strong><span>פעם בשבוע</span></div>
-          <div class="fact"><strong>6</strong><span>מרצים בצוות</span></div>
-        </div>
-      </section>
-
-      <aside class="hero-card visual">
-        <div class="overlay">
-          <div class="badge-row">
-            <span class="badge">חזון אישי</span>
-            <span class="badge">עמידה מול קהל</span>
-            <span class="badge">נטוורקינג</span>
-          </div>
-          <h2>מלמידה – להובלה אמיתית</h2>
-          <p>כלים מעשיים, תרגול קבוצתי, מרצים חיצוניים, והכנה להנחיה מקצועית בעולם האמיתי.</p>
-        </div>
-      </aside>
-    </div>
-  </header>
-
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>למי זה מתאים</h2>
-        <p>למי שרוצה להוביל, להנחות, להשפיע ולהפוך רעיונות למציאות עם שפה מקצועית, ביטחון וכלים ישימים.</p>
-      </div>
-      <div class="grid-3">
-        <div class="card">
-          <div class="icon">א</div>
-          <h3>לאנשים עם רצון להוביל</h3>
-          <p>מי שמרגיש שיש לו מה לתת לקבוצה, לקהילה או לעסק – ורוצה ללמוד איך להנחות נכון.</p>
-        </div>
-        <div class="card">
-          <div class="icon">ב</div>
-          <h3>למי שרוצה יותר ביטחון</h3>
-          <p>עמידה מול קהל, העברת מסר, בניית נוכחות והפיכת לחץ לדחף מקדם.</p>
-        </div>
-        <div class="card">
-          <div class="icon">ג</div>
-          <h3>למי שמחפש כלים מעשיים</h3>
-          <p>פחות תאוריה, יותר תרגול, שיח, דינמיקה, כלים ליישום מיידי ותהליך אמיתי.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="program">
-    <div class="wrap schedule">
-      <div class="card accent">
-        <div class="section-head" style="text-align:right;margin:0 0 18px">
-          <h2 style="margin-bottom:8px">מבנה הקורס</h2>
-          <p>שמונה מפגשים שבועיים, ארבע שעות כל מפגש, עם מסלול התפתחות אישי וקבוצתי.</p>
-        </div>
-        <div class="chips">
-          <span class="chip">פעם בשבוע</span>
-          <span class="chip">תרגול חי</span>
-          <span class="chip">צוות של 6 מרצים</span>
-          <span class="chip">מרצים חיצוניים</span>
-        </div>
-        <ul class="outline-list" style="margin-top:16px">
-          <li><strong>מפגש 1</strong>מבוא, תיאום ציפיות, חזון אישי, דינמיקה קבוצתית ומבנה קבוצת נטוורקינג.</li>
-          <li><strong>מפגש 2</strong>מחלום למציאות, לוח חזון, דקה מנצחת והנעת רעיון לפעולה.</li>
-          <li><strong>מפגש 3</strong>משחקי היכרות, הנחות יסוד להצלחה, דמיון מודרך, חזון ותכנית פעולה.</li>
-          <li><strong>מפגש 4</strong>מהיחיד אל היחד, אמת/שקר ומודעות, כללי קבוצה ומקצוענות, הכנה למצגת מרכזית.</li>
-          <li><strong>מפגש 5</strong>מחמאות וחשיפה אישית, מצגת מרכזית, עמידה מול קהל, עץ החיים והכנה לנטוורקינג.</li>
-          <li><strong>מפגש 6</strong>דינמיקות קבוצתיות ומעגל הדאגה וההשפעה עם מרצה חיצוני.</li>
-          <li><strong>מפגש 7</strong>התמודדות עם לחץ, כלי בקרה ליישום התכנית והובלת דינמיקה בידי המשתתפים.</li>
-          <li><strong>מפגש 8</strong>קבלת ביקורת בצורה יעילה, ספיד־נטוורקינג, מעגל הקשבה ומעגל סיום.</li>
-        </ul>
-      </div>
-
-      <div class="grid-2" style="grid-template-columns:1fr">
-        <div class="card">
-          <div class="icon">✓</div>
-          <h3>מה יוצאים איתו בפועל</h3>
-          <p>יכולת להוביל ולהנחות בצורה בטוחה יותר, להעביר מסר, לעבוד בתוך קבוצה ולבנות רשת קשרים איכותית.</p>
-        </div>
-        <div class="card">
-          <div class="icon">★</div>
-          <h3>יתרונות בולטים</h3>
-          <p>למידה חווייתית, תרגול אמיתי, שילוב מרצים חיצוניים, מסגרת קבוצתית תומכת וכלים ליישום מיידי.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="lead-form">
-    <div class="wrap leadbox hero-card">
-      <div id="formContainer">
-        <div class="section-head" style="text-align:right;margin:0 0 14px">
-          <h2 style="margin-bottom:8px">השאירו פרטים</h2>
-          <p>מלאו את הטופס ונחזור אליכם עם פרטים מלאים, התאמה והרשמה למחזור הקרוב.</p>
-        </div>
-
-        <iframe id="googleForm" src="https://docs.google.com/forms/d/e/1FAIpQLSfo-W09JOM08czt7E7TgBrMSdZ5CWb-RcEyHvTlFjiDwHj_VA/viewform?embedded=true" width="100%" height="950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-      </div>
-
-      <div id="thankYouBox" style="display:none; text-align:center; padding:60px 20px;">
-        <div style="font-size:48px; margin-bottom:20px;">✅</div>
-        <h2 style="font-size:32px; color:#0f766e; margin-bottom:16px;">תודה על ההרשמה!</h2>
-        <p style="font-size:18px; color:#5f6b7a; margin-bottom:40px; line-height:1.8;">
-          המידע שלך התקבל בהצלחה.<br>
-          נחזור אליכם בהקדם עם פרטים מלאים, בדיקת התאמה והרשמה למחזור הקרוב.
-        </p>
-        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-          <a href="https://taleshed.co.il/#leadership" style="display:inline-block; padding:15px 30px; background:linear-gradient(180deg, #35689a, #24496d); color:white; border-radius:999px; font-weight:800; text-decoration:none;">דע עוד על ההנהגה</a>
-          <a href="https://yarivtenta-creator.github.io/Tal-eshed/" style="display:inline-block; padding:15px 30px; background:#fff; color:#35689a; border:2px solid #35689a; border-radius:999px; font-weight:800; text-decoration:none;">חזור לעמוד הבית</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <h2>שאלות נפוצות</h2>
-      </div>
-      <div class="faq">
-        <details open>
-          <summary>כמה זמן נמשך הקורס?</summary>
-          <p>הקורס כולל שמונה מפגשים, ארבע שעות כל מפגש, פעם בשבוע.</p>
-        </details>
-        <details>
-          <summary>האם יש תרגול מעשי במהלך הקורס?</summary>
-          <p>כן. הקורס בנוי על תרגול, דינמיקות, חשיפה אישית, מצגות ויישום כלים בזמן אמת.</p>
-        </details>
-        <details>
-          <summary>למי הקורס מתאים במיוחד?</summary>
-          <p>למי שרוצה להנחות קבוצות, לעמוד מול קהל, לפתח ביטחון עצמי ולהוביל תהליכים בצורה מקצועית.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer wrap"> לקורס הכשרת מנחים "ממריאים לעסקים" 2026 · © 2026
-  </footer>
-
-  <div class="sticky-cta">
-    <a href="#lead-form">השאירו פרטים עכשיו</a>
+  <div class="box">
+    ✔ רקע בחינוך / טיפול / הדרכה<br>
+    ✔ ניסיון עם נוער (גם בסיסי)<br>
+    ✔ רצון לבנות הכנסה יציבה
   </div>
 
-  <script>
-    const cfg = window.APP_CONFIG || {};
-    const formContainer = document.getElementById('formContainer');
-    const thankYouBox = document.getElementById('thankYouBox');
+  <a class="cta" href="#form">בדקו התאמה</a>
 
-    function trackLead() {
-      try {
-        if (typeof fbq === 'function') fbq('track', 'Lead');
-      } catch(e) {}
-      try {
-        if (typeof gtag === 'function') gtag('event', 'generate_lead', { value: 1, currency: 'ILS' });
-      } catch(e) {}
-    }
+  <!-- PROCESS -->
+  <h2>איך זה עובד?</h2>
 
-    // Detect form submission and show thank you message
-    function checkFormSubmission() {
-      // Check if form iframe has loaded and may have submitted
-      // Google Forms redirects after submission, so we monitor for changes
-      const observer = new MutationObserver(() => {
-        // If form was just submitted, Google might show thank you
-        // We'll also trigger on user session completion
-      });
+  <div class="box">
+    1. משאירים פרטים<br>
+    2. קובעים שיחת התאמה קצרה<br>
+    3. בודקים אם זה מתאים<br>
+    4. מתחילים תהליך מסודר
+  </div>
 
-      // Listen for storage changes (Google Forms uses this)
-      window.addEventListener('storage', () => {
-        showThankYou();
-      });
+  <!-- URGENCY -->
+  <h2>לא מתאים לכולם</h2>
 
-      // Also check periodically for form submission
-      // Google Forms submissions may not have perfect detection
-      // so we'll use a combination approach
-      setTimeout(() => {
-        // Check if iframe content indicates submission
-        try {
-          const iframeDoc = document.getElementById('googleForm').contentDocument;
-          if (iframeDoc && iframeDoc.body.innerText.includes('تم استقبال إجابتك') ||
-              iframeDoc.body.innerText.includes('שלחנו את התשובה')) {
-            showThankYou();
-          }
-        } catch(e) {
-          // Cross-origin iframe - can't detect directly
-          // Use alternative: show thank you after a reasonable time
-        }
-      }, 2000);
-    }
+  <p>
+    אנחנו בודקים התאמה לפני כניסה לתהליך  
+    כדי לשמור על רמה גבוהה.
+  </p>
 
-    function showThankYou() {
-      formContainer.style.display = 'none';
-      thankYouBox.style.display = 'block';
-      trackLead();
-      // Scroll to thank you message
-      setTimeout(() => {
-        thankYouBox.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    }
+  <!-- FORM -->
+  <h2 id="form">השאירו פרטים</h2>
 
-    // For testing: expose function to window for manual triggering
-    window.showThankYou = showThankYou;
+  <form>
+    <input type="text" placeholder="שם מלא" required>
+    <input type="tel" placeholder="טלפון" required>
 
-    // Start monitoring
-    checkFormSubmission();
-  </script>
+    <select>
+      <option>ניסיון עם נוער</option>
+      <option>יש ניסיון</option>
+      <option>קצת ניסיון</option>
+      <option>אין ניסיון</option>
+    </select>
+
+    <button type="submit">בדקו התאמה</button>
+  </form>
+
+</div>
+
+<!-- STICKY WHATSAPP -->
+<a class="sticky" href="https://wa.me/972XXXXXXXXX">
+  שלחו הודעה בוואטסאפ
+</a>
+
 </body>
 </html>
